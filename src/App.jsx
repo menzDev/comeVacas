@@ -10,6 +10,7 @@ import res from "./assets/rey_recesvinto.png";
 import Prueba1 from "./Prueba1";
 import Prueba2 from "./Prueba2"
 import Prueba3 from "./Prueba3"
+import Prueba4 from "./Prueba4"
 
 const reyes=[
     {
@@ -61,7 +62,7 @@ const reyes=[
 const App = ({}) => {
 return(
 
-    <Prueba3 pepe={reyes}/>
+    <Prueba4 reyes={reyes}/>
     )
 };
 
