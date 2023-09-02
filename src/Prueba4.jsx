@@ -1,14 +1,14 @@
-import React from "react";;
+import React from "react";
 
 export default function Prueba4({reyes}){
-    const resultado = reyes.find(rey => rey.nombre === "Ervigio")
-    const resultado2 = reyes.find(rey => rey.nombre === "Teodorico")
+    const sumar = (e) =>{
+       e.target.innerText++
+    }
+    const resultado = reyes.filter(rey=>rey.vacasComidas>10 && rey.reinado>10).map(rey=> <div className="text-[25px]" key = {rey.nombre}>{rey.nombre}<p onClick={sumar}>0</p></div>)
 
     return(
-        <div className="flex justify-around w-[400px]">
-            <div>{resultado.nombre} <p>0</p></div>
-            <div>{resultado2.nombre} <p>0</p></div>
-            
+        <div className="retorno">
+            <div className="flex justify-around w-[400px] ">{resultado}</div>     
         </div>
     )
 }
